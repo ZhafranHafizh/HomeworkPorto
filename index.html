@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Zhafran Hafizh Izdihar Riyadi</title>
+    <!-- Menautkan ke file CSS yang ada di struktur repo Anda -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <!-- Tag <header> digunakan sebagai pembungkus navigasi utama -->
+    <header class="header">
+        <nav class="header__nav" aria-label="Main Navigation">
+            <a href="#hero" class="header__logo">Zhafran.</a>
+            <ul class="header__menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <!-- Tag <main> membungkus seluruh konten inti dari halaman ini -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero__content">
+                <p class="hero__greeting">Halo, perkenalkan saya</p>
+                <!-- <h1> hanya digunakan SATU KALI dalam satu halaman sebagai judul utama -->
+                <h1 class="hero__title">Zhafran Hafizh Izdihar Riyadi</h1>
+                <h2 class="hero__subtitle">Software Engineer | UI/UX Designer | QA Engineer</h2>
+                <p class="hero__description">
+                    Lulusan Software Engineering yang bersemangat dalam menciptakan pengalaman digital yang intuitif,
+                    aman, dan efisien.
+                </p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">Lihat Project</a>
+                    <a href="assets/cv.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Download
+                        CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about__content">
+                    <p>
+                        Saya adalah seorang lulusan Software Engineering dari Telkom University yang berdomisili di
+                        Tangerang. Saya memiliki minat mendalam dalam pengembangan web, perancangan antarmuka pengguna,
+                        serta pengujian kualitas perangkat lunak.
+                    </p>
+                    <p>
+                        Dengan pemahaman lintas disiplin antara desain (UI/UX) dan kode (Front-end/Back-end), saya
+                        bertujuan untuk menjembatani celah antara estetika visual dan performa teknis dalam setiap
+                        produk yang saya bangun.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Tools</h2>
+                <div class="skills__grid">
+
+                    <div class="skills__category">
+                        <!-- <h3> digunakan untuk sub-judul di dalam sebuah section -->
+                        <h3 class="skills__category-title">Development</h3>
+                        <ul class="skills__list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (Vanilla)</li>
+                            <li>React & React Native</li>
+                            <li>Laravel</li>
+                            <li>Python & Java</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Design & QA</h3>
+                        <ul class="skills__list">
+                            <li>UI/UX Design</li>
+                            <li>Figma & Wireframing</li>
+                            <li>Manual Testing</li>
+                            <li>Bug Hunting & Pen-Test Basics</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects__grid">
+
+                    <!-- PROJECT 1: ASETIA -->
+                    <article class="project-card">
+                        <div class="project-card__image-wrapper">
+                            <!-- Menggunakan placeholder Unsplash bertema Web/Design -->
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Asetia Project" class="project-card__image">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Asetia</h3>
+                            <p class="project-card__tagline"><strong>Marketplace Aset Digital Paling Lokal</strong></p>
+                            <p class="project-card__description">
+                                Aplikasi marketplace untuk aset desain dan kode dengan sentuhan gaya desain
+                                neo-brutalism (dengan warna utama kuning) dan integrasi payment gateway.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Web Development</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="btn btn--small" target="_blank" rel="noopener noreferrer">Live
+                                    Demo</a>
+                                <a href="#" class="btn btn--small btn--outline" target="_blank"
+                                    rel="noopener noreferrer">GitHub Repo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: FRUGO -->
+                    <article class="project-card">
+                        <div class="project-card__image-wrapper">
+                            <!-- Menggunakan placeholder Unsplash bertema Buah/Startup -->
+                            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Frugo Project" class="project-card__image">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Frugo</h3>
+                            <p class="project-card__description">
+                                Konsep startup B2B marketplace yang dirancang khusus untuk efisiensi distribusi pada
+                                industri buah-buahan.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">System Design</span>
+                                <span class="tag">Software Engineering</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="#" class="btn btn--small" target="_blank" rel="noopener noreferrer">Detail
+                                    Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact__description">
+                    Tertarik untuk berdiskusi tentang teknologi, desain, atau peluang kolaborasi? Jangan ragu untuk
+                    menghubungi saya!
+                </p>
+                <!-- Tag <address> secara semantik digunakan untuk informasi kontak -->
+                <address class="contact__info">
+                    <a href="mailto:emailanda@gmail.com" class="btn btn--primary">Kirim Email</a>
+
+                    <div class="contact__socials">
+                        <a href="https://github.com/username-anda" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/username-anda" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </address>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <!-- Tag <footer> untuk bagian penutup website -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Zhafran Hafizh Izdihar Riyadi. All rights reserved.</p>
+            <p class="footer__note">Built manually with Semantic HTML5 & CSS3 for Dicoding Karir Elevation Vol. 2</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

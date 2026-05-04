@@ -1,0 +1,448 @@
+/* ==========================================================================
+   1. CSS VARIABLES (Tema & Tipografi)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette: Modern Minimalist */
+    --bg-color: #F8FAFC;
+    /* Light gray background */
+    --surface-color: #FFFFFF;
+    /* White for cards/sections */
+    --text-main: #0F172A;
+    /* Dark slate for headings */
+    --text-muted: #475569;
+    /* Lighter slate for paragraphs */
+    --primary-color: #2563EB;
+    /* Royal blue for primary actions */
+    --primary-hover: #1D4ED8;
+    --border-color: #E2E8F0;
+
+    /* Asetia Project Specific Accent */
+    --asetia-yellow: #FFD500;
+
+    /* Typography */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Spacing - Kita tambah paddingnya agar tidak mepet */
+    --section-padding: 5rem 0;
+    --container-padding: 0 2rem;
+    /* Diperbesar dari 1.5rem */
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Mencegah horizontal scroll akibat padding */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Efek scroll halus saat klik menu navigasi */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-muted);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Garansi tidak ada horizontal scroll */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   3. LAYOUT & UTILITIES
+   ========================================================================== */
+.container {
+    width: 100%;
+    padding: var(--container-padding);
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+/* ==========================================================================
+   4. COMPONENTS (Buttons & Tags)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn--outline {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn--outline:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.btn--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--bg-color);
+    color: var(--text-muted);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.875rem;
+    border: 1px solid var(--border-color);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   5. HEADER & NAVIGATION (Mobile First)
+   ========================================================================== */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    /* Menu numpuk di bawah logo untuk HP */
+    align-items: center;
+    padding: 1rem var(--container-padding);
+    gap: 1rem;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__menu a {
+    font-weight: 500;
+}
+
+.header__menu a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   6. HERO SECTION
+   ========================================================================== */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ini kunci agar hero ke tengah horizontal */
+    text-align: center;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.hero__content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    /* INI KUNCINYA: Memberikan nafas di kiri-kanan layar HP */
+}
+
+.hero__greeting {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero__description {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.125rem;
+}
+
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* Mencegah tombol meregang full ke ujung layar */
+}
+
+.hero__actions .btn {
+    width: 100%;
+    max-width: 280px;
+}
+
+/* ==========================================================================
+   7. ABOUT & SKILLS SECTION
+   ========================================================================== */
+.about__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about__content p {
+    margin-bottom: 1rem;
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 Kolom di HP */
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills__category {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.skills__list {
+    list-style: none;
+}
+
+.skills__list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skills__list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   8. PROJECTS SECTION
+   ========================================================================== */
+.projects__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 Kolom di HP */
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Aksen khusus untuk project Asetia sesuai brand identity */
+.project-card:first-child {
+    border-top: 4px solid var(--asetia-yellow);
+}
+
+.project-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #E2E8F0;
+    /* Fallback color jika gambar belum load */
+}
+
+.project-card__content {
+    padding: 1.5rem;
+}
+
+.project-card__title {
+    margin-bottom: 0.25rem;
+}
+
+.project-card__tagline {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.project-card__description {
+    margin-bottom: 1.5rem;
+}
+
+.project-card__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   9. CONTACT & FOOTER
+   ========================================================================== */
+.contact {
+    text-align: center;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.contact__description {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.contact__info {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact__socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact__socials a {
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+.contact__socials a:hover {
+    text-decoration-color: var(--primary-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--text-main);
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.footer__note {
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (Desktop Adjustments)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1100px;
+        /* Diperlebar sedikit dari 1024px */
+        padding: 0 3rem;
+        /* Padding desktop lebih lega */
+    }
+
+    /* Perbaikan Header agar sejajar dengan container dan tidak mepet ujung */
+    .header__nav {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.5rem 3rem;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+    }
+
+    .hero__actions .btn {
+        width: auto;
+    }
+
+    .skills__grid,
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
